@@ -1,0 +1,13 @@
+<h1>My tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+  <% if task.completed %>
+    <i class="far fa-check-square">
+  <% end %>
+  <%= link_to task.title, task_path(task) %>
+  </i>
+  <% end %>
+</ul>
+<%= link_to 'Create new task', "/tasks/new" %>
+
+<script src="https://kit.fontawesome.com/7687125315.js" crossorigin="anonymous"></script>
